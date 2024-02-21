@@ -1,0 +1,37 @@
+# put here your custom config value
+menu "Example Configuration"
+	config ESP_WIFI_SSID
+		string "WiFi SSID"
+		default "myssid"
+		help
+		SSID (network name) for the example to connect to.
+
+	config ESP_WIFI_PASSWORD
+		string "WiFi Password"
+		default "mypassword"
+		help
+		WiFi password (WPA or WPA2) for the example to use.
+	
+	config BLINK_GPIO
+        int "Blink GPIO number"
+        range 0 48
+        default 2
+        help
+            GPIO number (IOxx) to blink on and off or the RMT signal for the addressable LED.
+            Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to blink.
+			
+	config BUTTON_GPIO
+        int "Button GPIO number"
+        range 0 48
+        default 4
+        help
+            GPIO number Button.
+			
+	config BLINK_PERIOD
+        int "Blink period in ms"
+        range 10 3600000
+        default 1000
+        help
+            Define the blinking period in milliseconds.
+			
+endmenu
